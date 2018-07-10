@@ -28,32 +28,32 @@ Usage Example
 | Property Name                     | Property Type | Description                                                  |
 | --------------------------------- | ------------- | ------------------------------------------------------------ |
 | ip                                | string        | IP address of online transaction. It supports both IPv4 and IPv6 address format. |
-| firstName     | string        | User's first name.                                           |
-| lastName      | string        | User's last name.                                            |
-| username      | string        | User's username.                                             |
-| password      | string        | User's password.                                             |
-| email         | string        | User's email address.                                        |
-| user_phone    | string        | User's phone number.                                         |
-| address       | string        | Street address of billing address.                           |
-| city          | string        | City of billing address.                                     |
-| state         | string        | State of billing address. It supports state codes, e.g. NY (New York), for state or province of United States or Canada. Please refer to [State & Province Codes](https://www.fraudlabspro.com/developer/reference/state-and-province-codes) for complete list. |
-| postcode      | string        | Postal or ZIP code of billing address.                       |
-| country       | string        | Country of billing address. It requires the input of ISO-3166 alpha-2 country code, e.g. US for United States. Please refer to [Country Codes](https://www.fraudlabspro.com/developer/reference/country-codes) for complete list. |
-| orderId       | string        | Merchant identifier to uniquely identify a transaction. It supports maximum of 15 characters user order id input. |
-| note          | string        | Merchant description of an order transaction. It supports maximum of 200 characters. |
-| amount        | float         | Amount of the transaction.                                   |
-| quantity      | integer       | Total quantity of the transaction.                           |
-| currency      | string        | Currency code used in the transaction. It requires the input of ISO-4217 (3 characters) currency code, e.g. USD for US Dollar. Please refer to [Currency Codes](https://www.fraudlabspro.com/developer/reference/currency-codes) for complete list. |
-| department    | string        | Merchant identifier to uniquely identify a product or service department. |
-| paymentMethod | string        | Payment mode of transaction. Please see [reference section](#payment-method).  |
-| number        | string        | Billing credit card number or BIN number.                    |
-| avs           | string        | The single character AVS result returned by the credit card processor. Please refer to [AVS & CVV2 Response Codes](https://www.fraudlabspro.com/developer/reference/avs-and-cvv2-response-codes) for details. |
-| cvv           | string        | The single character CVV2 result returned by the credit card processor. Please refer to [AVS & CVV2 Response Codes](https://www.fraudlabspro.com/developer/reference/avs-and-cvv2-response-codes) for details. |
-| address       | string        | Street address of shipping address.                          |
-| city          | string        | City of shipping address.                                    |
-| state         | string        | State of shipping address. It supports state codes, e.g. NY - New York, for state or province of United States or Canada. Please refer to [State & Province Codes](https://www.fraudlabspro.com/developer/reference/state-and-province-codes) for complete list. |
-| postcode      | string        | Postal or ZIP code of shipping address.                      |
-| country       | string        | Country of shipping address. It requires the input of ISO-3166 alpha-2 country code, e.g. US for United States. Please refer to [Country Codes](https://www.fraudlabspro.com/developer/reference/country-codes) for complete list. |
+| first_name         | string        | User's first name.                                           |
+| last_name          | string        | User's last name.                                            |
+| email              | string        | User's username.                                             |
+| password           | string        | User's password.                                             |
+| email              | string        | User's email address.                                        |
+| user_phone         | string        | User's phone number.                                         |
+| bill_addr          | string        | Street address of billing address.                           |
+| bill_city          | string        | City of billing address.                                     |
+| bill_state         | string        | State of billing address. It supports state codes, e.g. NY (New York), for state or province of United States or Canada. Please refer to [State & Province Codes](https://www.fraudlabspro.com/developer/reference/state-and-province-codes) for complete list. |
+| bill_zip_code      | string        | Postal or ZIP code of billing address.                       |
+| bill_country       | string        | Country of billing address. It requires the input of ISO-3166 alpha-2 country code, e.g. US for United States. Please refer to [Country Codes](https://www.fraudlabspro.com/developer/reference/country-codes) for complete list. |
+| user_order_id      | string        | Merchant identifier to uniquely identify a transaction. It supports maximum of 15 characters user order id input. |
+| user_order_memo    | string        | Merchant description of an order transaction. It supports maximum of 200 characters. |
+| amount             | float         | Amount of the transaction.                                   |
+| quantity           | integer       | Total quantity of the transaction.                           |
+| currency           | string        | Currency code used in the transaction. It requires the input of ISO-4217 (3 characters) currency code, e.g. USD for US Dollar. Please refer to [Currency Codes](https://www.fraudlabspro.com/developer/reference/currency-codes) for complete list. |
+| department         | string        | Merchant identifier to uniquely identify a product or service department. |
+| payment_mode       | string        | Payment mode of transaction. Please see [reference section](#payment-method).  |
+| number             | string        | Billing credit card number or BIN number.                    |
+| avs                | string        | The single character AVS result returned by the credit card processor. Please refer to [AVS & CVV2 Response Codes](https://www.fraudlabspro.com/developer/reference/avs-and-cvv2-response-codes) for details. |
+| cvv                | string        | The single character CVV2 result returned by the credit card processor. Please refer to [AVS & CVV2 Response Codes](https://www.fraudlabspro.com/developer/reference/avs-and-cvv2-response-codes) for details. |
+| ship_addr          | string        | Street address of shipping address.                          |
+| ship_city          | string        | City of shipping address.                                    |
+| ship_state         | string        | State of shipping address. It supports state codes, e.g. NY - New York, for state or province of United States or Canada. Please refer to [State & Province Codes](https://www.fraudlabspro.com/developer/reference/state-and-province-codes) for complete list. |
+| ship_zip_code      | string        | Postal or ZIP code of shipping address.                      |
+| ship_country       | string        | Country of shipping address. It requires the input of ISO-3166 alpha-2 country code, e.g. US for United States. Please refer to [Country Codes](https://www.fraudlabspro.com/developer/reference/country-codes) for complete list. |
 
 ```
 import com.fraudlabspro.*;
@@ -114,7 +114,7 @@ public class Main {
 | Parameter Name | Parameter Type | Description                                                  |
 | -------------- | -------------- | ------------------------------------------------------------ |
 | id             | string         | FraudLabs Pro transaction ID or Order ID.                    |
-| type           | string         | ID type. Either: **[objectOfOrder].FLP_ID** or **[objectOfOrder].ORDER_ID** |
+| id_type        | string         | ID type. Either: **[objectOfOrder].FLP_ID** or **[objectOfOrder].ORDER_ID** |
 
 ```
 import com.fraudlabspro.*;
@@ -148,8 +148,8 @@ public class Main {
 | Property Name | Property Type | Description                                                  |
 | ------------- | ------------- | ------------------------------------------------------------ |
 | id            | string        | Unique transaction ID generated from **Validate** function.  |
-| status        | string        | Perform APPROVE, REJECT, or REJECT_BLACKLIST action to transaction.    Refer to [reference section](#feedback-status) for status code. |
-| note          | string        | Notes for the feedback request.                              |
+| action        | string        | Perform APPROVE, REJECT, or REJECT_BLACKLIST action to transaction.    Refer to [reference section](#feedback-status) for status code. |
+| notes         | string        | Notes for the feedback request.                              |
 
 ```
 import com.fraudlabspro.*;
