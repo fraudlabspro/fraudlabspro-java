@@ -56,6 +56,7 @@ Usage Example
 | country       | string        | Country of shipping address. It requires the input of ISO-3166 alpha-2 country code, e.g. US for United States. Please refer to [Country Codes](https://www.fraudlabspro.com/developer/reference/country-codes) for complete list. |
 
 ```
+import com.fraudlabspro.*;
 import java.util.Hashtable;
 
 public class Main {
@@ -116,6 +117,7 @@ public class Main {
 | type           | string         | ID type. Either: **[objectOfOrder].FLP_ID** or **[objectOfOrder].ORDER_ID** |
 
 ```
+import com.fraudlabspro.*;
 import java.util.Hashtable;
 
 public class Main {
@@ -150,6 +152,7 @@ public class Main {
 | note          | string        | Notes for the feedback request.                              |
 
 ```
+import com.fraudlabspro.*;
 import java.util.Hashtable;
 
 public class Main {
@@ -187,6 +190,7 @@ public class Main {
 | country_code  | string        | ISO 3166 country code for the recipient mobile phone number. If parameter is supplied, then some basic telephone number validation is done. |
 
 ```
+import com.fraudlabspro.*;
 import java.util.Hashtable;
 
 public class Main {
@@ -221,6 +225,7 @@ public class Main {
 | otp           | string        | The OTP that was sent to the recipient’s phone. |
 
 ```
+import com.fraudlabspro.*;
 import java.util.Hashtable;
 
 public class Main {
