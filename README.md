@@ -149,7 +149,7 @@ public class Main {
 | ------------- | ------------- | ------------------------------------------------------------ |
 | id            | string        | Unique transaction ID generated from **Validate** function.  |
 | action        | string        | Perform APPROVE, REJECT, or REJECT_BLACKLIST action to transaction.    Refer to [reference section](#feedback-status) for status code. |
-| notes         | string        | Notes for the feedback request.                              |
+| note          | string        | Notes for the feedback request.                              |
 
 ```
 import com.fraudlabspro.*;
@@ -168,7 +168,7 @@ public class Main {
         Hashtable<String, String> data = new Hashtable<>();
         data.put("id", "20180709-NHAEUK");
         data.put("action", fb.APPROVE);  // Please refer to reference section for full list of feedback statuses
-        data.put("notes", "This customer made a valid purchase before.");
+        data.put("note", "This customer made a valid purchase before.");
 
         String result = fb.feedback(data);  // Sends feedback details to FraudLabs Pro
     }
