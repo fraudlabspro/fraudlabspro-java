@@ -1,6 +1,7 @@
 package com.fraudlabspro;
 
 import java.io.BufferedReader;
+import java.io.DataOutputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -32,15 +33,24 @@ class Http {
         }
     }
 
-    public static String post(URL url) {
+    public static String post(URL url, String post) {
         try {
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("POST");
             conn.setRequestProperty("Accept", "application/json");
+            
+            String urlParameters = post;
+    		
+    		conn.setDoOutput(true);
+    		DataOutputStream dos = new DataOutputStream(conn.getOutputStream());
+    		dos.writeBytes(urlParameters);
+    		dos.flush();
+    		dos.close();
 
             if (conn.getResponseCode() != 200) {
                 return ("Failed : HTTP error code : " + conn.getResponseCode());
             }
+            
             BufferedReader br = new BufferedReader(new InputStreamReader(
                     (conn.getInputStream())));
 

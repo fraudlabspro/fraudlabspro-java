@@ -22,8 +22,9 @@ class SMSVerification {
             for (Map.Entry<String, String> entry : data.entrySet()) {
                 dataStr.append("&").append(entry.getKey()).append("=").append(URLEncoder.encode(entry.getValue(), "UTF-8"));
             }
+            String post = "key=" + FraudLabsPro.APIKEY + dataStr;
 
-            return Http.post(new URL("https://api.fraudlabspro.com/v1/verification/send?key=" + FraudLabsPro.APIKEY + dataStr));
+            return Http.post(new URL("https://api.fraudlabspro.com/v1/verification/send"), post);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

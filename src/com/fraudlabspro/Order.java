@@ -108,8 +108,10 @@ public class Order{
             for (Map.Entry<String, String> entry : data.entrySet()) {
                 dataStr.append("&").append(entry.getKey()).append("=").append(URLEncoder.encode(entry.getValue(), "UTF-8"));
             }
+            
+            String post = "key=" + FraudLabsPro.APIKEY + dataStr;
 
-            return Http.post(new URL("https://api.fraudlabspro.com/v1/order/screen?key=" + FraudLabsPro.APIKEY + dataStr));
+            return Http.post(new URL("https://api.fraudlabspro.com/v1/order/screen"), post);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -131,8 +133,9 @@ public class Order{
             for (Map.Entry<String, String> entry : data.entrySet()) {
                 dataStr.append("&").append(entry.getKey()).append("=").append(URLEncoder.encode(entry.getValue(), "UTF-8"));
             }
+            String post = "key=" + FraudLabsPro.APIKEY + dataStr;
 
-            return Http.post(new URL("https://api.fraudlabspro.com/v1/order/feedback?key=" + FraudLabsPro.APIKEY + dataStr));
+            return Http.post(new URL("https://api.fraudlabspro.com/v1/order/feedback"), post);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
