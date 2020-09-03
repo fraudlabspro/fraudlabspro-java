@@ -187,6 +187,7 @@ public class Main {
 | ------------- | ------------- | ------------------------------------------------------------ |
 | tel           | string        | The recipient mobile phone number in E164 format which is a plus followed by just numbers with no spaces or parentheses. |
 | mesg          | string        | The message template for the SMS. Add &lt;otp&gt; as placeholder for the actual OTP to be generated. Max length is 140 characters. |
+| otp_timeout   | integer       | Timeout feature for OTP value in seconds. Default is 3600 seconds(1 hour). Max timeout is 86400 seconds(24 hours). |
 | country_code  | string        | ISO 3166 country code for the recipient mobile phone number. If parameter is supplied, then some basic telephone number validation is done. |
 
 ```
@@ -207,6 +208,7 @@ public class Main {
         data.put("tel", "+15616288674");
         data.put("country_code", "US");
         data.put("mesg", "Hi, your OTP is <otp>.");
+        data.put("otp_timeout", 3600);
 
         String result = sms.sendSMS(data);
     }
