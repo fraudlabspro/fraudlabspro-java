@@ -205,7 +205,7 @@ public class Main {
 
         // Sets SMS details for authentication purpose
         Hashtable<String, String> data = new Hashtable<>();
-        data.put("tel", "+15616288674");
+        data.put("tel", "+123456789");
         data.put("country_code", "US");
         data.put("mesg", "Hi, your OTP is <otp>.");
         data.put("otp_timeout", 3600);
