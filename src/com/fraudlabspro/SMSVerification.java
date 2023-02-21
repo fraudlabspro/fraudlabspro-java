@@ -17,7 +17,7 @@ class SMSVerification {
     public String sendSMS(Hashtable<String, String> data) {
         try {
             StringBuilder dataStr = new StringBuilder();
-            data.put("source", "FraudLabsPro JAVA SDK");
+            data.put("source", "sdk-java");
             data.put("source_version", FraudLabsPro.VERSION);
             for (Map.Entry<String, String> entry : data.entrySet()) {
                 dataStr.append("&").append(entry.getKey()).append("=").append(URLEncoder.encode(entry.getValue(), "UTF-8"));
@@ -40,7 +40,7 @@ class SMSVerification {
     public String verifySMS(Hashtable<String, String> data) {
         try {
             StringBuilder dataStr = new StringBuilder();
-            data.put("source", "FraudLabsPro JAVA SDK");
+            data.put("source", "sdk-java");
             data.put("source_version", FraudLabsPro.VERSION);
             for (Map.Entry<String, String> entry : data.entrySet()) {
                 dataStr.append("&").append(entry.getKey()).append("=").append(URLEncoder.encode(entry.getValue(), "UTF-8"));

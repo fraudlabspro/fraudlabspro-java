@@ -102,7 +102,7 @@ public class Order{
             }
 
             StringBuilder dataStr = new StringBuilder();
-            data.put("source", "FraudLabsPro JAVA SDK");
+            data.put("source", "sdk-java");
             data.put("source_version", FraudLabsPro.VERSION);
             data.put("flp_checksum", flp_checksum);
             for (Map.Entry<String, String> entry : data.entrySet()) {
@@ -128,7 +128,7 @@ public class Order{
     public String feedback(Hashtable<String, String> data) {
         try {
             StringBuilder dataStr = new StringBuilder();
-            data.put("source", "FraudLabsPro JAVA SDK");
+            data.put("source", "sdk-java");
             data.put("source_version", FraudLabsPro.VERSION);
             for (Map.Entry<String, String> entry : data.entrySet()) {
                 dataStr.append("&").append(entry.getKey()).append("=").append(URLEncoder.encode(entry.getValue(), "UTF-8"));
@@ -151,7 +151,7 @@ public class Order{
     public String getTransaction(Hashtable<String, String> data) {
         try {
             StringBuilder dataStr = new StringBuilder();
-            data.put("source", "FraudLabsPro JAVA SDK");
+            data.put("source", "sdk-java");
             data.put("source_version", FraudLabsPro.VERSION);
             for (Map.Entry<String, String> entry : data.entrySet()) {
                 dataStr.append("&").append(entry.getKey()).append("=").append(URLEncoder.encode(entry.getValue(), "UTF-8"));
