@@ -24,7 +24,7 @@ class SMSVerification {
             }
             String post = "key=" + FraudLabsPro.APIKEY + dataStr;
 
-            return Http.post(new URL("https://api.fraudlabspro.com/v1/verification/send"), post);
+            return Http.post(new URL("https://api.fraudlabspro.com/v2/verification/send"), post);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -46,7 +46,7 @@ class SMSVerification {
                 dataStr.append("&").append(entry.getKey()).append("=").append(URLEncoder.encode(entry.getValue(), "UTF-8"));
             }
 
-            return Http.get(new URL("https://api.fraudlabspro.com/v1/verification/result?key=" + FraudLabsPro.APIKEY + dataStr));
+            return Http.get(new URL("https://api.fraudlabspro.com/v2/verification/result?key=" + FraudLabsPro.APIKEY + dataStr));
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

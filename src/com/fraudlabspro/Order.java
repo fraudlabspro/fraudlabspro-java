@@ -17,7 +17,7 @@ public class Order{
     /**
      * Order statuses.
      *
-     * @const string
+     * string
      */
     public final String APPROVE = "APPROVE";
     public final String REJECT = "REJECT";
@@ -26,7 +26,7 @@ public class Order{
     /**
      * Payment methods.
      *
-     * @const string
+     * string
      */
     public final String CREDIT_CARD = "CREDITCARD";
     public final String PAYPAL = "PAYPAL";
@@ -41,7 +41,7 @@ public class Order{
     /**
      * ID types.
      *
-     * @const string
+     * string
      */
     public final String FLP_ID = "fraudlabspro_id";
 	public final String ORDER_ID = "user_order_id";
@@ -111,7 +111,7 @@ public class Order{
             
             String post = "key=" + FraudLabsPro.APIKEY + dataStr;
 
-            return Http.post(new URL("https://api.fraudlabspro.com/v1/order/screen"), post);
+            return Http.post(new URL("https://api.fraudlabspro.com/v2/order/screen"), post);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -135,7 +135,7 @@ public class Order{
             }
             String post = "key=" + FraudLabsPro.APIKEY + dataStr;
 
-            return Http.post(new URL("https://api.fraudlabspro.com/v1/order/feedback"), post);
+            return Http.post(new URL("https://api.fraudlabspro.com/v2/order/feedback"), post);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -157,7 +157,7 @@ public class Order{
                 dataStr.append("&").append(entry.getKey()).append("=").append(URLEncoder.encode(entry.getValue(), "UTF-8"));
             }
 
-            return Http.get(new URL("https://api.fraudlabspro.com/v1/order/result?key=" + FraudLabsPro.APIKEY + dataStr));
+            return Http.get(new URL("https://api.fraudlabspro.com/v2/order/result?key=" + FraudLabsPro.APIKEY + dataStr));
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
