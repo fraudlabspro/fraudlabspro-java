@@ -30,12 +30,11 @@ public class Order{
      */
     public final String CREDIT_CARD = "CREDITCARD";
     public final String PAYPAL = "PAYPAL";
-    public final String GOOGLE_CHECKOUT = "GOOGLECHECKOUT";
     public final String CASH_ON_DELIVERY = "COD";
-    public final String MONEY_ORDER = "MONEYORDER";
-    public final String WIRE_TRANSFER = "WIRED";
     public final String BANK_DEPOSIT = "BANKDEPOSIT";
-    public final String BITCOIN = "BITCOIN";
+    public final String GIFT_CARD = "GIFTCARD";
+    public final String CRYPTO = "CRYPTO";
+    public final String WIRE_TRANSFER = "WIRED";
     public final String OTHERS = "OTHERS";
 
     /**

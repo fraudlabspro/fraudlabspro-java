@@ -27,12 +27,11 @@ To learn more about installation, usage, and code examples, please visit the dev
 | ------------------------------------ |
 | [objectOfOrder].CREDIT_CARD          |
 | [objectOfOrder].PAYPAL               |
-| [objectOfOrder].GOOGLE_CHECKOUT      |
 | [objectOfOrder].CASH_ON_DELIVERY     |
-| [objectOfOrder].MONEY_ORDER          |
-| [objectOfOrder].WIRE_TRANSFER        |
 | [objectOfOrder].BANK_DEPOSIT         |
-| [objectOfOrder].BITCOIN              |
+| [objectOfOrder].GIFT_CARD            |
+| [objectOfOrder].CRYPTO               |
+| [objectOfOrder].WIRE_TRANSFER        |
 | [objectOfOrder].OTHERS               |
 
 

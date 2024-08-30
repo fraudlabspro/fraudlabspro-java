@@ -109,12 +109,14 @@ Retrieve geolocation information for an IP address.
 | username        | string  | User's username.                                             |
 | password        | string  | User's password.                                             |
 | email           | string  | (optional) User's email address.                                        |
-| phone           | string  | (optional) User's phone number.                                         |
+| user_phone      | string  | (optional) User's phone number.                                         |
 | bill_addr       | string  | (optional) Street address of billing address. |
 | bill_city       | string  | (optional) City of billing address. |
 | bill_state      | string  | (optional) State of billing address. It supports state codes, e.g. NY (New York), for state or province of United States or Canada.|
 | bill_country    | string  | (optional) Country of billing address. It requires the input of ISO-3166 alpha-2 country code, e.g. US for United States.|
 | bill_zip_code   | string  | (optional) Postal or ZIP code of billing address. |
+| ship_last_name  | string  | (optional) Receiver's last name. |
+| ship_first_name | string  | (optional) Receiver's first name. |
 | ship_addr       | string  | (optional) Street address of shipping address. |
 | ship_city       | string  | (optional) City of shipping address. |
 | ship_state      | string  | (optional) State of shipping address. It supports state codes, e.g. NY - New York, for state or province of United States or Canada. |
@@ -124,12 +126,13 @@ Retrieve geolocation information for an IP address.
 | avs             | string  | (optional) The single character AVS result returned by the credit card processor. |
 | cvv             | string  | (optional) The single character CVV2 result returned by the credit card processor.<br/> This is not for the input of the actual CVV code from the back of the credit card. |
 | user_order_id   | string  | (optional) Merchant identifier to uniquely identify a transaction. It supports<br/> maximum of 15 characters user order id input. |
-| user_order_memo          | string        | (optional) Merchant description of an order transaction. It supports maximum of 200 characters. |
-| amount          | float | (optional) Amount of the transaction. |
+| user_order_memo | string  | (optional) Merchant description of an order transaction. It supports maximum of 200 characters. |
+| amount          | float   | (optional) Amount of the transaction. |
 | quantity        | integer | (optional) Total quantity of the transaction. |
 | currency        | string  | (optional) Currency code used in the transaction. It requires the input of<br/> ISO-4217 (3 characters) currency code, e.g. USD for US Dollar. |
 | department      | string  | (optional) Merchant identifier to uniquely identify a product or service department. |
-| payment_mode    | string  | (optional) Payment mode of transaction. Valid values: creditcard \| affirm \| paypal \| googlecheckout \| bitcoin \| cod \| moneyorder \| wired \|<br/> bankdeposit \| elviauthorized \| paymitco \| cybersource \| sezzle \| viabill \| amazonpay \| pmnts_gateway \| giftcard \| ewayrapid \| others. |
+| payment_gateway | string  | (optional) The name of payment gateway used to capture the payment. |
+| payment_mode    | string  | (optional) Payment mode of transaction. Valid values: creditcard \| paypal \| cod \| bankdeposit \| giftcard \| crypto \| wired \| others |
 
 :return: Returns the geolocation information in array. Refer below table for the fields avaliable in the array
 :rtype: array

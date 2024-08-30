@@ -50,9 +50,12 @@ public class Main {
         data.put("amount", "79.89");
         data.put("quantity", "1");
         data.put("currency", "USD");
+        data.put("payment_gateway", "stripe");
         data.put("payment_mode", order.CREDIT_CARD);  // Please refer reference section for full list of payment methods
 
         // Shipping information
+        data.put("ship_first_name", "Hector");
+        data.put("ship_last_name", "Henderson");
         data.put("ship_addr", "4469 Chestnut Street");
         data.put("ship_city", "Tampa");
         data.put("ship_state", "FL");
