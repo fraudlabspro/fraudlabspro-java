@@ -110,6 +110,7 @@ Retrieve geolocation information for an IP address.
 | password        | string  | User's password.                                             |
 | email           | string  | (optional) User's email address.                                        |
 | user_phone      | string  | (optional) User's phone number.                                         |
+| bill_to         | string  | (optional) Billing details such as company name. |
 | bill_addr       | string  | (optional) Street address of billing address. |
 | bill_city       | string  | (optional) City of billing address. |
 | bill_state      | string  | (optional) State of billing address. It supports state codes, e.g. NY (New York), for state or province of United States or Canada.|
