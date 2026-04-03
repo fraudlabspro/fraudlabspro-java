@@ -6,11 +6,11 @@
 # -- Project information
 
 project = 'FraudLabs Pro Java'
-copyright = '2024, FraudLabs Pro'
+copyright = '2026, FraudLabs Pro'
 author = 'FraudLabs Pro'
 
-release = '0.1.0'
-version = '0.1.0'
+release = '4.1.0'
+version = '4.1.0'
 
 # -- General configuration
 
@@ -61,4 +61,4 @@ html_favicon = 'images/favicon.ico'
 
 html_title = "FraudLabs Pro Java"
 
-# html_baseurl = "https://ip2proxy-php.readthedocs.io/en/latest/"
+# html_baseurl = "https://fraudlabspro-java.readthedocs.io/en/latest/"

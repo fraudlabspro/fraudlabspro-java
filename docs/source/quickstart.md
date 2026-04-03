@@ -177,3 +177,32 @@ public class Main {
     }
 }
 ```
+
+### Report Payment Gateway Feedback
+
+You can report payment gateway feedback as below:
+
+```java
+import com.fraudlabspro.*;
+import java.util.Hashtable;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // Configures FraudLabs Pro API key
+        FraudLabsPro.APIKEY = "YOUR_API_KEY";
+        
+        // Payment Feedback API
+        Payment pay = new Payment();
+
+        // Set Payment Feedback parameter
+        Hashtable<String, String> data = new Hashtable<>();
+        data.put("email", "hh5566@gmail.com");
+        data.put("status", "declined");
+        data.put("message", "Call Issuer. Pick Up Card. (2047)");
+        data.put("fraudlabspro_id", "20260131-O263CR");
+
+        String result = pay.feedback(data);
+    }
+}
+```
