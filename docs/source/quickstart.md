@@ -52,6 +52,7 @@ public class Main {
         data.put("currency", "USD");
         data.put("payment_gateway", "stripe");
         data.put("payment_mode", order.CREDIT_CARD);  // Please refer reference section for full list of payment methods
+        data.put("items", '[{"sku": "SKU-1001","quantity": 1,"price": 99.99,"type": "physical","name": "Wireless Headphones","purchase_type": "one-time purchase"},{"sku": "SKU-2005","quantity": 1,"price": 19.99,"type": "downloadable","name": "Country List"}]');
 
         // Shipping information
         data.put("ship_first_name", "Hector");

@@ -134,6 +134,7 @@ Retrieve geolocation information for an IP address.
 | department      | string  | (optional) Merchant identifier to uniquely identify a product or service department. |
 | payment_gateway | string  | (optional) The name of payment gateway used to capture the payment. |
 | payment_mode    | string  | (optional) Payment mode of transaction. Valid values: creditcard \| paypal \| cod \| bankdeposit \| giftcard \| crypto \| wired \| others |
+| items    | string  | (optional) The items purchased in the transaction. This field accepts a JSON array of objects where each object contains sku, quantity, price and the optional fields type, name and purchase_type. For more details, refer to [https://www.fraudlabspro.com/resources/tutorials/fraudlabs-pro-screen-order-api-now-supports-item-level-order-data/](https://www.fraudlabspro.com/resources/tutorials/fraudlabs-pro-screen-order-api-now-supports-item-level-order-data/). |
 
 :return: Returns the geolocation information in array. Refer below table for the fields avaliable in the array
 :rtype: array
